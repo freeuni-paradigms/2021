@@ -1,10 +1,14 @@
 ---
+title: მთავარი
 nav_order: 1
 ---
 ## კლასრუმის კოდი
 `opkissb`
 
-## ლექცია/სემინარების ბმულები
+## ჰენდაუთები
+(არქივის ბმული)[https://drive.google.com/file/d/1OBZd9R8r8N0AC-Ddn1Y4DS54_cp1_jB4]
+
+## შეხვედრის ბმულები
 
 [ლექცია](https://zoom.us/j/3274885370)
 
@@ -22,14 +26,15 @@ nav_order: 1
 | 13:30 | [https://zoom.us/j/9517803605](https://zoom.us/j/9517803605) | [TBD](TBD) |
 | 14:40 | [https://zoom.us/j/9517803605](https://zoom.us/j/9517803605) | [TBD](TBD) |
 
-[შეხვედრა სექციის ლიდერებთან]()  
-TBD  
+## შეხვედრა სექციის ლიდერებთან
+[TBD](TBD)
 
 ## კონტაქტი
 ზოგად ინფორმაციასთან დაკავშირებით ინდივიდუალურ მეილს ნუ გამოგზავნით. თუ რამე გაურკვეველია, შეიძლება სხვასაც აინტერესებდეს და უკეთესი იქნება თუ კლასრუმზე დაპოსტავთ.
 პირად საკითხებთან დაკავშირებით შეგიძლიათ მოგვწეროთ:
+
 | ლექტორი | ელ-ფოსტა |
 |---|---|
-| გიორგი | g.lekveishvili@freeuni.edu.ge |
-| გვანცა | g.tsutskhashvili@freeuni.edu.ge |
-| დემეტრე | d.pipia@freeuni.edu.ge |
+| გიორგი | (g.lekveishvili@freeuni.edu.ge)[mailto:g.lekveishvili@freeuni.edu.ge] |
+| გვანცა | (g.tsutskhashvili@freeuni.edu.ge)[mailto:g.tsutskhashvili@freeuni.edu.ge] |
+| დემეტრე | (d.pipia@freeuni.edu.ge)[mailto:d.pipia@freeuni.edu.ge] |
