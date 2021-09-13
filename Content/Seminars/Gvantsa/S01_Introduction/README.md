@@ -11,29 +11,6 @@ grand_parent: სემინარები
 
 # გამოყენებული კოდები და მათი გაშვების ინსტრუქცია
 
-## [c_examples](https://github.com/freeuni-paradigms/2021/tree/master/Content/Seminars/Gvantsa/S01_Introduction/c_examples)
-
-კოდის დასაკომპილირებლად გამოიყენეთ ბრძანება
-
-```sh
-gcc <ფაილის სახელი>
-./a.out
-```
-
-მაგალითად:
-
-```sh
-gcc strings.c
-./a.out
-```
-
-თუ გინდათ რომ გამშვებ ფაილს 'a.out' არ ერქვას გამოიყენეთ -o ფლეგი კომპილაციისას მაგალითად:
-
-```sh
-gcc strings.c -o strings
-./strings
-```
-
 ## [gcd](https://github.com/freeuni-paradigms/2021/tree/master/Content/Seminars/Gvantsa/S01_Introduction/gcd)
 
 C კოდის დაკომპილირება და გაშვება
@@ -61,4 +38,27 @@ python კოდის გაშვება
 
 ```sh
 python gcd.py
+```
+
+## [c_examples](https://github.com/freeuni-paradigms/2021/tree/master/Content/Seminars/Gvantsa/S01_Introduction/c_examples)
+
+კოდის დასაკომპილირებლად გამოიყენეთ ბრძანება
+
+```sh
+gcc <ფაილის სახელი>
+./a.out
+```
+
+მაგალითად:
+
+```sh
+gcc strings.c
+./a.out
+```
+
+თუ გინდათ რომ გამშვებ ფაილს 'a.out' არ ერქვას გამოიყენეთ -o ფლეგი კომპილაციისას მაგალითად:
+
+```sh
+gcc strings.c -o strings
+./strings
 ```
