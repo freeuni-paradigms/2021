@@ -11,7 +11,7 @@ grand_parent: სემინარები
 
 # გამოყენებული კოდები და მათი გაშვების ინსტრუქცია
 
-## [c_examples](https://github.com/freeuni-paradigms/freeuni-paradigms.github.io/tree/master/content/seminars/Gvantsa/S1_Introduction/c_examples)
+## [c_examples](https://github.com/freeuni-paradigms/2021/tree/master/Content/Seminars/Gvantsa/S01_Introduction/c_examples)
 
 კოდის დასაკომპილირებლად გამოიყენეთ ბრძანება
 
@@ -34,7 +34,7 @@ gcc strings.c -o strings
 ./strings
 ```
 
-## [gcd](https://github.com/freeuni-paradigms/freeuni-paradigms.github.io/tree/master/content/seminars/Gvantsa/S1_Introduction/gcd)
+## [gcd](https://github.com/freeuni-paradigms/2021/tree/master/Content/Seminars/Gvantsa/S01_Introduction/gcd)
 
 C კოდის დაკომპილირება და გაშვება
 
