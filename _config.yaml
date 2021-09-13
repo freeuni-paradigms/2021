@@ -1,0 +1,55 @@
+remote_theme: pmarsceill/just-the-docs
+
+title: პროგრამირების პარადიგმები
+description: თბილისის თავისუფალი უნივერსიტეტი, 2021 შემოდგომა
+
+baseurl: /2021
+url: "https://freeuni-paradigms.github.io"
+
+exclude: []
+
+search_enabled: true
+search:
+  heading_level: 4
+  previews: 3 # TODO what does this do
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false # TODO try changing
+
+heading_anchors: true
+
+aux_links: 
+    "საიტის კოდი GitHub-ზე":
+    - "https://github.com/freeuni-paradigms/2021"
+    "Google Classroom":
+    - "https://classroom.google.com/c/Mzg5NDE0NzI4MDI0"
+
+aux_links_new_tab: true
+
+nav_sort: case_insensitive
+
+back_to_top: true
+back_to_top_text: "გვერდის დასაწყისში დაბრუნება"
+
+gh_edit_link: true
+gh_edit_link_text: "ამ გვერდის კოდი"
+gh_edit_repository: "https://github.com/freeuni-paradigms/2021"
+gh_edit_branch: "master" # TODO change # the branch that your docs is served from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+color_scheme: nil
+
+# TODO add more plugins
+plugins:
+  - jekyll-seo-tag
+
+# TODO what does this do
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
