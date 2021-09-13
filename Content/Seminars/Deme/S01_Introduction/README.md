@@ -11,7 +11,7 @@ grand_parent: სემინარები
 
 # გამოყენებული კოდები და მათი გაშვების ინსტრუქცია
 
-## [gcd](https://github.com/freeuni-paradigms/2021/tree/master/Content/Seminars/Gvantsa/S01_Introduction/gcd)
+## [gcd](https://github.com/freeuni-paradigms/2021/tree/master/Content/Seminars/Deme/S01_Introduction/gcd)
 
 C კოდის დაკომპილირება და გაშვება
 
@@ -40,7 +40,7 @@ python კოდის გაშვება
 python gcd.py
 ```
 
-## [c_examples](https://github.com/freeuni-paradigms/2021/tree/master/Content/Seminars/Gvantsa/S01_Introduction/c_examples)
+## [c_examples](https://github.com/freeuni-paradigms/2021/tree/master/Content/Seminars/Deme/S01_Introduction/c_examples)
 
 კოდის დასაკომპილირებლად გამოიყენეთ ბრძანება
 
