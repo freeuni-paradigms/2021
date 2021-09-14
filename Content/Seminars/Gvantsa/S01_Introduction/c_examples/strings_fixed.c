@@ -2,7 +2,8 @@
 
 void ChangeString(char **s) { *s = "World"; }
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
   char *s = "Hello";
   printf("Original string: %s\n", s);
   ChangeString(&s);
