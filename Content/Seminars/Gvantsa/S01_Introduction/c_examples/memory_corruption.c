@@ -5,7 +5,7 @@ void SomeCalculation()
   int a[10];
   int b = 5;
   printf("Value of b: %d\n", b);
-  for (int i = 9; i >= -1; --i)
+  for (int i = 9; i >= -2; --i)
   {
     a[i] = i;
   }
