@@ -1,6 +1,9 @@
 #include <stdio.h>
 
-void ChangeString(char *s) { s = "World"; }
+void ChangeString(char *s)
+{
+  s = "World";
+}
 
 int main(int argc, char **argv)
 {
