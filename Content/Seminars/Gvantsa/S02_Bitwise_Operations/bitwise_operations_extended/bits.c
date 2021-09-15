@@ -132,6 +132,42 @@ NOTES:
 #endif
 
 /* 
+ * negate - return -x 
+ *   Example: negate(1) = -1.
+ *   Legal ops: ! ~ & ^ | + << >>
+ *   Max ops: 5
+ *   Rating: 2
+ */
+int negate(int x)
+{
+
+  return 2;
+}
+
+/* 
+ * tmin - return minimum two's complement integer 
+ *   Legal ops: ! ~ & ^ | + << >>
+ *   Max ops: 4
+ *   Rating: 1
+ */
+int tmin(void)
+{
+  return 2;
+}
+
+/* 
+ * isPositive - return 1 if x > 0, return 0 otherwise 
+ *   Example: isPositive(-1) = 0.
+ *   Legal ops: ! ~ & ^ | + << >>
+ *   Max ops: 8
+ *   Rating: 3
+ */
+int isPositive(int x)
+{
+  return 2;
+}
+
+/* 
  * bitAnd - x&y using only ~ and | 
  *   Example: bitAnd(6, 5) = 4
  *   Legal ops: ~ |
@@ -142,6 +178,7 @@ int bitAnd(int x, int y)
 {
   return 2;
 }
+
 /* 
  * getByte - Extract byte n from word x
  *   Bytes numbered from 0 (LSB) to 3 (MSB)
@@ -154,6 +191,34 @@ int getByte(int x, int n)
 {
   return 2;
 }
+
+/* 
+ * fitsBits - return 1 if x can be represented as an 
+ *  n-bit, two's complement integer.
+ *   1 <= n <= 32
+ *   Examples: fitsBits(5,3) = 0, fitsBits(-4,3) = 1
+ *   Legal ops: ! ~ & ^ | + << >>
+ *   Max ops: 15
+ *   Rating: 2
+ */
+int fitsBits(int x, int n)
+{
+  return 2;
+}
+
+/* 
+ * divpwr2 - Compute x/(2^n), for 0 <= n <= 30
+ *  Round toward zero
+ *   Examples: divpwr2(15,1) = 7, divpwr2(-33,4) = -2
+ *   Legal ops: ! ~ & ^ | + << >>
+ *   Max ops: 15
+ *   Rating: 2
+ */
+int divpwr2(int x, int n)
+{
+  return 2;
+}
+
 /* 
  * logicalShift - shift x to the right by n, using a logical shift
  *   Can assume that 0 <= n <= 31
@@ -185,64 +250,6 @@ int bitCount(int x)
  *   Rating: 4 
  */
 int bang(int x)
-{
-  return 2;
-}
-/* 
- * tmin - return minimum two's complement integer 
- *   Legal ops: ! ~ & ^ | + << >>
- *   Max ops: 4
- *   Rating: 1
- */
-int tmin(void)
-{
-  return 2;
-}
-/* 
- * fitsBits - return 1 if x can be represented as an 
- *  n-bit, two's complement integer.
- *   1 <= n <= 32
- *   Examples: fitsBits(5,3) = 0, fitsBits(-4,3) = 1
- *   Legal ops: ! ~ & ^ | + << >>
- *   Max ops: 15
- *   Rating: 2
- */
-int fitsBits(int x, int n)
-{
-  return 2;
-}
-/* 
- * divpwr2 - Compute x/(2^n), for 0 <= n <= 30
- *  Round toward zero
- *   Examples: divpwr2(15,1) = 7, divpwr2(-33,4) = -2
- *   Legal ops: ! ~ & ^ | + << >>
- *   Max ops: 15
- *   Rating: 2
- */
-int divpwr2(int x, int n)
-{
-  return 2;
-}
-/* 
- * negate - return -x 
- *   Example: negate(1) = -1.
- *   Legal ops: ! ~ & ^ | + << >>
- *   Max ops: 5
- *   Rating: 2
- */
-int negate(int x)
-{
-
-  return 2;
-}
-/* 
- * isPositive - return 1 if x > 0, return 0 otherwise 
- *   Example: isPositive(-1) = 0.
- *   Legal ops: ! ~ & ^ | + << >>
- *   Max ops: 8
- *   Rating: 3
- */
-int isPositive(int x)
 {
   return 2;
 }
