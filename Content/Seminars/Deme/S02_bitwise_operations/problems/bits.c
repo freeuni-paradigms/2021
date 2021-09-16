@@ -193,6 +193,21 @@ int getByte(int x, int n)
 }
 
 /* 
+ * logicalShift - shift x to the right by n, using a logical shift
+ *   Can assume that 0 <= n <= 31
+ *   Examples: logicalShift(0x87654321,4) = 0x08765432
+ *   Legal ops: ! ~ & ^ | + << >>
+ *   Max ops: 20
+ *   Rating: 3 
+ */
+int logicalShift(int x, int n)
+{
+  return 2; 
+}
+
+
+
+/* 
  * fitsBits - return 1 if x can be represented as an 
  *  n-bit, two's complement integer.
  *   1 <= n <= 32
@@ -219,18 +234,6 @@ int divpwr2(int x, int n)
   return 2;
 }
 
-/* 
- * logicalShift - shift x to the right by n, using a logical shift
- *   Can assume that 0 <= n <= 31
- *   Examples: logicalShift(0x87654321,4) = 0x08765432
- *   Legal ops: ! ~ & ^ | + << >>
- *   Max ops: 20
- *   Rating: 3 
- */
-int logicalShift(int x, int n)
-{
-  return 2;
-}
 /*
  * bitCount - returns count of number of 1's in word
  *   Examples: bitCount(5) = 2, bitCount(7) = 3
