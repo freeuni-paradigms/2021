@@ -140,8 +140,7 @@ NOTES:
  */
 int negate(int x)
 {
-
-  return 2;
+  return ~x + 1;
 }
 
 /* 
@@ -152,19 +151,8 @@ int negate(int x)
  */
 int tmin(void)
 {
-  return 2;
-}
-
-/* 
- * isPositive - return 1 if x > 0, return 0 otherwise 
- *   Example: isPositive(-1) = 0.
- *   Legal ops: ! ~ & ^ | + << >>
- *   Max ops: 8
- *   Rating: 3
- */
-int isPositive(int x)
-{
-  return 2;
+  return 1 << 31;
+  // return 0x80000000;
 }
 
 /* 
@@ -176,7 +164,21 @@ int isPositive(int x)
  */
 int bitAnd(int x, int y)
 {
-  return 2;
+  return ~(~x | ~y);
+}
+
+
+/* 
+ * isPositive - return 1 if x > 0, return 0 otherwise 
+ *   Example: isPositive(-1) = 0.
+ *   Legal ops: ! ~ & ^ | + << >>
+ *   Max ops: 8
+ *   Rating: 3
+ */
+int isPositive(int x)
+{
+  return (!!x) & !(x >> 31);
+  // return (!!x) & ((x >> 31) + 1);
 }
 
 /* 
