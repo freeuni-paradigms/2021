@@ -139,9 +139,9 @@ NOTES:
  *   Rating: 2
  */
 int negate(int x)
-{
-  
-  return 2;
+{ 
+  // ~x + x + 1 = 0
+  return ~x + 1;
 }
 
 /* 
@@ -152,7 +152,7 @@ int negate(int x)
  */
 int tmin(void)
 {
-  return 2;
+  return (1 << 31);
 }
 
 /* 
@@ -164,7 +164,7 @@ int tmin(void)
  */
 int isPositive(int x)
 {
-  return 2;
+  return ((x >> 31) + 1) & !!x;
 }
 
 /* 
@@ -176,7 +176,7 @@ int isPositive(int x)
  */
 int bitAnd(int x, int y)
 {
-  return 2;
+  return ~(~x | ~y);
 }
 
 /* 
@@ -189,7 +189,11 @@ int bitAnd(int x, int y)
  */
 int getByte(int x, int n)
 {
-  return 2;
+  // 0x12345678
+  // 00010010 00110100 01010110 01111000
+  // 0x00000034
+
+  return (x >> (n << 3)) & 0xFF;
 }
 
 /* 
