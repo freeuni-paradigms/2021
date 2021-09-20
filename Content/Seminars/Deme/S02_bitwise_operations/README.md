@@ -20,7 +20,7 @@ gcc bitwise_operators.c -o bitwise_operators
 ./bitwise_operators
 ```
 
-## [bitwise operations problems](https://github.com/freeuni-paradigms/2021/tree/master/Content/Seminars/Deme/S02_bitwise_operations/datalab-handout)
+## [bitwise operations problems](https://github.com/freeuni-paradigms/2021/tree/master/Content/Seminars/Deme/S02_bitwise_operations/problems)
 
 ```
 make
