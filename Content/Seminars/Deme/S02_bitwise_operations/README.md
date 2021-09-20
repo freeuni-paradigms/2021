@@ -5,7 +5,7 @@ parent: დემე
 grand_parent: სემინარები
 ---
 
-# შესავალი
+# ბიტური ოპერაციები
 
 - [gcc options](https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html?fbclid=IwAR04oO8UrZz_WykSWN-sLzGxIh3Ape0ddjqnPyziPJjCaw01k0PU3wQslV8)
 - [თექვსმეტობითი ჩანაწერი](https://simple.wikipedia.org/wiki/Hexadecimal#:~:text=The%20hexadecimal%20numeral%20system%2C%20often,numbers%20and%20six%20extra%20symbols.)
