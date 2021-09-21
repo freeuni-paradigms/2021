@@ -4,7 +4,7 @@ int main() {
 
     char ch = 128;
     int int_ch = (int)ch;
-    unsigned int unsigned_int_ch = (int)(unsigned char)ch;
+    int unsigned_int_ch = (int)(unsigned char)ch;
     printf("int_ch: %d\n", int_ch);
     printf("unsigned_int_ch: %d\n", unsigned_int_ch);
 

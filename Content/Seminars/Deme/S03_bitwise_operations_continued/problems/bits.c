@@ -193,6 +193,7 @@ int getByte(int x, int n)
   // 00010010 00110100 01010110 01111000
   // 0x00000034
 
+  // n << 3 = 8 * n
   return (x >> (n << 3)) & 0xFF;
 }
 
@@ -205,8 +206,9 @@ int getByte(int x, int n)
  *   Rating: 3 
  */
 int logicalShift(int x, int n)
-{
-  return 2; 
+{ 
+  int bitsToClear = ~(((1 << 31) >> n) << 1);
+  return (x >> n) & bitsToClear; 
 }
 
 /* 
@@ -221,8 +223,13 @@ int logicalShift(int x, int n)
  *   Rating: 2
  */
 unsigned float_neg(unsigned uf)
-{
-  return 2;
+{ 
+  unsigned exp = (uf >> 23) & 0xFF;
+  unsigned frac = (uf << 9);
+  if (exp == 0xFF && frac != 0) {
+    return uf;
+  }
+  return uf ^ (1 << 31);
 }
 
 /* 
@@ -234,7 +241,12 @@ unsigned float_neg(unsigned uf)
  */
 int bang(int x)
 {
-  return 2;
+  x |= (x << 16);
+  x |= (x << 8);
+  x |= (x << 4);
+  x |= (x << 2);
+  x |= (x << 1);
+  return (x >> 31) + 1;
 }
 
 
