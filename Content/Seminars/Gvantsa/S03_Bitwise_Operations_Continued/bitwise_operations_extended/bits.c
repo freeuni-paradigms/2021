@@ -190,7 +190,7 @@ int isPositive(int x)
  */
 int getByte(int x, int n)
 {
-  return 2;
+  return (x >> (n << 3)) & 0xFF;
 }
 
 /* 
@@ -203,7 +203,8 @@ int getByte(int x, int n)
  */
 int logicalShift(int x, int n)
 {
-  return 2;
+  int bitsToClear = ~(((1 << 31) >> n) << 1);
+  return (x >> n) & bitsToClear;
 }
 
 /* 
@@ -219,7 +220,15 @@ int logicalShift(int x, int n)
  */
 unsigned float_neg(unsigned uf)
 {
-  return 2;
+  int signBitMask = 1 << 31;           // 1000000000000000000
+  int temp = signBitMask >> 8;         // 1111111110000000000
+  int expBitMask = temp ^ signBitMask; // 011111111000000
+
+  if ((uf & expBitMask) == expBitMask)
+    if (uf & ~temp)
+      return uf;
+
+  return signBitMask ^ uf;
 }
 
 /* 

@@ -16,5 +16,7 @@ int main()
 
     strcpy1(example, name);
 
+    printf("Example: %s\n", example);
+
     return 0;
 }
