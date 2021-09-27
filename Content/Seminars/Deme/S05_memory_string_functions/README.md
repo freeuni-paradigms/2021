@@ -1,11 +1,11 @@
 ---
 nav_order: 5
-title: 5. ფუნქციები სტრინგებზე(strcmp, strcpy, strlen, strcat, strdup)
+title: 5. ფუნქციები სტრინგებზე(strcmp, strcpy, strlen, strcat, strdup, memset)
 parent: დემე
 grand_parent: სემინარები
 ---
 
-ფუნქციები სტრინგებზე(strcmp, strcpy, strlen, strcat, strdup, memset)
+# ფუნქციები სტრინგებზე(strcmp, strcpy, strlen, strcat, strdup, memset)
 
 # გამოყენებული კოდები და მათი გაშვების ინსტრუქცია
 
