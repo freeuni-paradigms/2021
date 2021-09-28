@@ -4,6 +4,7 @@
 
 char *ConcatStrings(const char *first, const char *second)
 {
+	return NULL;
 }
 
 int main()
