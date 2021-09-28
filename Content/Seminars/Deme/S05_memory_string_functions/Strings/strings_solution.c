@@ -2,27 +2,62 @@
 #include <stdlib.h>
 
 int strcmp(const char *s1, const char *s2) {
-    return 0;
+    while (*s1 && *s2) {
+        if (*s1 != *s2) break;
+        s1 += 1;
+        s2 += 1;
+    }
+    return *(const unsigned char*)s1 - *(const unsigned char*)s2;
 }
 
 char *strcpy(char *dest, const char *src){
-    return NULL;
+    char * destPtr = dest;
+    while (*src != '\0') {
+        *destPtr = *src;
+        src++;
+        destPtr++;
+    }
+    *destPtr = '\0';
+
+    return dest;
 }
 
 size_t strlen(const char *s) {
-    return 0;
+    size_t size = 0;
+    while(*s != '\0') {
+        size++;
+        s++;
+    }
+    return size;
 }
 
 char *strcat(char *dest, const char *src) {
-    return NULL;
+    char* destPtr = dest + strlen(dest);
+    while (*src != '\0') {
+        *destPtr = *src;
+        destPtr++;
+        src++;
+    }
+    *destPtr = '\0';
+ 
+    return dest;
 }
 
 char *strdup(const char *s){
-    return NULL;
+    size_t size = strlen(s);
+    char * str = malloc(size + 1);
+    strcpy(str, s);
+    return str;
 }
 
 void *memset(void *s, int c, size_t n) {
-    return NULL;
+    char * sPtr = (char *)s;
+    while (n > 0) {
+        *sPtr = c;
+        sPtr++;
+        n--;
+    }
+    return s;
 }
 
 
@@ -77,8 +112,8 @@ int main() {
     char * originStr = "Strdup First Example";
     char * newStr = strdup("Strdup First Example");
     printf("    newStr: %s\n", newStr);
-    printf("    originStr value address is %p\n", (void*)&(*originStr));
-    printf("    newStr value address is %p\n", (void*)&(*newStr));
+    printf("    originStr value address is %p\n", (void*)originStr);
+    printf("    newStr value address is %p\n", (void*)newStr);
     printf("\n");
 
     // memset
