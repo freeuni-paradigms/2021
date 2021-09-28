@@ -16,5 +16,5 @@ int main()
 	printf("string2: %s\n", string2);
 	printf("result: %s\n", result);
 	printf("addresses (can't be the same):\n");
-	printf("1: %u, 2: %u, r: %u\n", string1, string2, result);
+	printf("1: %p, 2: %p, r: %p\n", string1, string2, result);
 }
