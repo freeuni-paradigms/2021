@@ -1,6 +1,7 @@
 pass
 *.o
 *.out
+*.gch
 
 .vscode
 .idea
