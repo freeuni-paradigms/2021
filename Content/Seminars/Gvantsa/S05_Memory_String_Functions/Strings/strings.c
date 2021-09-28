@@ -84,8 +84,8 @@ int main()
     char *originStr = "Strdup First Example";
     char *newStr = strdup("Strdup First Example");
     printf("    newStr: %s\n", newStr);
-    printf("    originStr value address is %p\n", (void *)&(*originStr));
-    printf("    newStr value address is %p\n", (void *)&(*newStr));
+    printf("    originStr value address is %p\n", (void *)originStr);
+    printf("    newStr value address is %p\n", (void *)newStr);
     printf("\n");
 
     // memset
