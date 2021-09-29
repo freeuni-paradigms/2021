@@ -75,7 +75,7 @@ int main() {
     // strdup
     printf("strdup:\n");
     char * originStr = "Strdup First Example";
-    char * newStr = strdup("Strdup First Example");
+    char * newStr = strdup(originStr);
     printf("    newStr: %s\n", newStr);
     printf("    originStr value address is %p\n", (void*)originStr);
     printf("    newStr value address is %p\n", (void*)newStr);
