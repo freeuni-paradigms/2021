@@ -4,7 +4,11 @@
 
 char *ConcatStrings(const char *first, const char *second)
 {
-	return NULL;
+	size_t newSize = strlen(first) + strlen(second) + 1;
+	char * result = malloc(newSize);
+	strcpy(result, first);
+	strcat(result, second);
+	return result;
 }
 
 int main()
