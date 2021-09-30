@@ -3,32 +3,65 @@
 
 int strcmp(const char *s1, const char *s2)
 {
-    return 0;
+    while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2)
+    {
+        s1++;
+        s2++;
+    }
+
+    return *(unsigned char *)s1 -
+           *(unsigned char *)s2;
 }
 
 char *strcpy(char *dest, const char *src)
 {
-    return NULL;
+    char *new_dest = dest;
+
+    while (*src != '\0')
+    {
+        *new_dest = *src;
+        new_dest++;
+        src++;
+    }
+    return dest;
 }
 
 size_t strlen(const char *s)
 {
-    return 0;
+    int size = 0;
+    while (*s != '\0')
+    {
+        size++;
+        s++;
+    }
+    return size;
 }
 
 char *strcat(char *dest, const char *src)
 {
-    return NULL;
+    int size = strlen(dest);
+    strcpy(dest + size, src);
+    return dest;
 }
 
 char *strdup(const char *s)
 {
-    return NULL;
+    char *result = malloc(strlen(s) + 1);
+    strcpy(result, s);
+    return result;
 }
 
 void *memset(void *s, int c, size_t n)
 {
-    return NULL;
+    unsigned char ch = c;
+    char *src = s;
+    while (n > 0)
+    {
+        *src = ch;
+        n--;
+        src++;
+    }
+    return s;
 }
 
 int main()
