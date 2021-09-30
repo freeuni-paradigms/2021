@@ -33,7 +33,7 @@ nav_order: 1
 | დრო | ვიდეო შეხვედრის ბმული | კალენდრის ბმული |
 |---|---|---|
 | სამშაბათი 19:00 | [https://meet.google.com/gtu-cmfb-csy](https://meet.google.com/gtu-cmfb-csy) | [დაამატეთ კალენდარში](https://calendar.google.com/event?action=TEMPLATE&tmeid=MTRmYm9uYWJpMzM5bHY4N250MWYzaTVyMTdfMjAyMTEwMDVUMTIwMDAwWiBnLmxla3ZlaXNodmlsaUBmcmVldW5pLmVkdS5nZQ&tmsrc=g.lekveishvili%40freeuni.edu.ge&scp=ALL) |
-| ხუთშაბათი 16:00 | [https://meet.google.com/gtu-cmfb-csy](https://meet.google.com/gtu-cmfb-csy) | [დაამატეთ კალენდარში](https://calendar.google.com/event?action=TEMPLATE&tmeid=MTRmYm9uYWJpMzM5bHY4N250MWYzaTVyMTdfMjAyMTEwMDVUMTIwMDAwWiBnLmxla3ZlaXNodmlsaUBmcmVldW5pLmVkdS5nZQ&tmsrc=g.lekveishvili%40freeuni.edu.ge&scp=ALL)|
+| ხუთშაბათი 16:00 | [https://meet.google.com/gtu-cmfb-csy](https://meet.google.com/gtu-cmfb-csy) | [დაამატეთ კალენდარში](https://calendar.google.com/event?action=TEMPLATE&tmeid=MTRmYm9uYWJpMzM5bHY4N250MWYzaTVyMTdfMjAyMTEwMDVUMTIwMDAwWiBnLmxla3ZlaXNodmlsaUBmcmVldW5pLmVkdS5nZQ&tmsrc=g.lekveishvili%40freeuni.edu.ge&scp=ALL) |
 
 ## კონტაქტი
 ზოგად ინფორმაციასთან დაკავშირებით ინდივიდუალურ მეილს ნუ გამოგზავნით. თუ რამე გაურკვეველია, შეიძლება სხვასაც აინტერესებდეს და უკეთესი იქნება თუ კლასრუმზე დაპოსტავთ.
