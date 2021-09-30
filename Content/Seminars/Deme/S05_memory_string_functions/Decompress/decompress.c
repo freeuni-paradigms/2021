@@ -4,7 +4,26 @@
 #include <stdio.h>
 
 void Decompress(char **data) {
+    char * encoded = *data;
+    char * decoded = NULL;
+    int decodedSize = 0;
 
+    int index = 0;
+    while (encoded[index] != '\0') {
+        int n = (encoded[index] >> 4) & 0xF;
+        int m = encoded[index] & 0xF;
+
+        decoded = realloc(decoded, decodedSize + m*n + 1);
+        for (int j = 0; j < m; j++) {
+            void *destPnt = decoded + decodedSize + j * n;
+            memcpy(destPnt, encoded + index + 1, n);
+        }
+        decodedSize += m*n;
+        index += (n + 1);
+    }
+    decoded[decodedSize] = '\0';
+    free(encoded);
+    *data = decoded;
 }
 
 void Test1() {
