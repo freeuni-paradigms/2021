@@ -32,8 +32,8 @@ nav_order: 1
 ### შეხვედრა სექციის ლიდერებთან
 | დრო | ვიდეო შეხვედრის ბმული | კალენდრის ბმული |
 |---|---|---|
-| სამშაბათი 19:00 | [https://meet.google.com/gtu-cmfb-csy](https://meet.google.com/gtu-cmfb-csy) | [დაამატეთ კალენდარში](https://calendar.google.com/event?action=TEMPLATE&tmeid=MTRmYm9uYWJpMzM5bHY4N250MWYzaTVyMTdfMjAyMTEwMDVUMTIwMDAwWiBnLmxla3ZlaXNodmlsaUBmcmVldW5pLmVkdS5nZQ&tmsrc=g.lekveishvili%40freeuni.edu.ge&scp=ALL) |
-| ხუთშაბათი 16:00 | [https://meet.google.com/gtu-cmfb-csy](https://meet.google.com/gtu-cmfb-csy) | [დაამატეთ კალენდარში](https://calendar.google.com/event?action=TEMPLATE&tmeid=MTRmYm9uYWJpMzM5bHY4N250MWYzaTVyMTdfMjAyMTEwMDVUMTIwMDAwWiBnLmxla3ZlaXNodmlsaUBmcmVldW5pLmVkdS5nZQ&tmsrc=g.lekveishvili%40freeuni.edu.ge&scp=ALL) |
+| სამშაბათი 19:00 | [https://meet.google.com/gtu-cmfb-csy](https://meet.google.com/gtu-cmfb-csy) | [დაამატეთ კალენდარში](https://calendar.google.com/event?action=TEMPLATE&tmeid=NGRnbTk2NWsxb3RjbjVwYTM0cGE1YjltODhfMjAyMTEwMDVUMTUwMDAwWiBnLmxla3ZlaXNodmlsaUBmcmVldW5pLmVkdS5nZQ&tmsrc=g.lekveishvili%40freeuni.edu.ge&scp=ALL) |
+| ხუთშაბათი 16:00 | [https://meet.google.com/gtu-cmfb-csy](https://meet.google.com/gtu-cmfb-csy) | [დაამატეთ კალენდარში](https://calendar.google.com/event?action=TEMPLATE&tmeid=MTRmYm9uYWJpMzM5bHY4N250MWYzaTVyMTdfMjAyMTEwMDdUMTIwMDAwWiBnLmxla3ZlaXNodmlsaUBmcmVldW5pLmVkdS5nZQ&tmsrc=g.lekveishvili%40freeuni.edu.ge&scp=ALL) |
 
 ## კონტაქტი
 ზოგად ინფორმაციასთან დაკავშირებით ინდივიდუალურ მეილს ნუ გამოგზავნით. თუ რამე გაურკვეველია, შეიძლება სხვასაც აინტერესებდეს და უკეთესი იქნება თუ კლასრუმზე დაპოსტავთ.
@@ -44,3 +44,8 @@ nav_order: 1
 | გიორგი | [g.lekveishvili@freeuni.edu.ge](mailto:g.lekveishvili@freeuni.edu.ge) |
 | გვანცა | [g.tsutskhashvili@freeuni.edu.ge](mailto:g.tsutskhashvili@freeuni.edu.ge) |
 | დემეტრე | [d.pipia@freeuni.edu.ge](mailto:d.pipia@freeuni.edu.ge) |
+
+| ლიდერი | ელ-ფოსტა |
+|---|---|
+| გიორგი | [ggoge19@freeuni.edu.ge](mailto:ggoge19@freeuni.edu.ge) |
+| გუგა | [gkata19@freeuni.edu.ge](mailto:gkata19@freeuni.edu.ge) |
