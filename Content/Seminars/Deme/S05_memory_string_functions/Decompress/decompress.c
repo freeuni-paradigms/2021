@@ -4,32 +4,7 @@
 #include <stdio.h>
 
 void Decompress(char **data) {
-    char * encoded = *(data);
-    char * decoded = NULL;
-    int decodedSize = 0;
-    
-    int index = 0;
-    while (encoded[index] != '\0') {
 
-        // int control = *(unsigned char*)(encoded + index);
-        // int n = control >> 4;
-        // int m = control & ((1 << 4) - 1);
-
-        int n = (encoded[index] >> 4) & 0xF;
-        int m = encoded[index] & 0xF;
-
-        decoded = realloc(decoded, decodedSize + m*n + 1);
-        char * decodedPtr = decoded;
-        for (int j = 0; j < m; j++) {
-            void *dstPtr = decoded + decodedSize + n * j;
-            memcpy(dstPtr, encoded + index + 1, n);
-        }
-        decodedSize += n * m;
-        decoded[decodedSize] = '\0';
-        index += (n + 1);
-    }
-    free(encoded);
-    *data = decoded;
 }
 
 void Test1() {
