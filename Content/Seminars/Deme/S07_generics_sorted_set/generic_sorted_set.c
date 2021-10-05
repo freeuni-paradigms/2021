@@ -24,6 +24,7 @@ void SetNew(sortedset *set, int elemSize, int (*cmpfn)(const void *, const void 
     set->elemSize = elemSize;
     set->root = malloc(sizeof(int) + set->allocLen * NodeSize(set->elemSize));
     assert(set->root != NULL);
+    *set->root = -1;
 }
 
 /*
