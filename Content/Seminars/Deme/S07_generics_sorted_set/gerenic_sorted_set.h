@@ -2,7 +2,11 @@
 #include <stdbool.h>
 
 typedef struct {
-
+    int *root;
+    int logLen;
+    int allocLen;
+    int elemSize;
+    int (*cmpfn)(const void *, const void *);
 } sortedset;
 
 void SetNew(sortedset *set, int elemSize, int (*cmpfn)(const void *, const void *));
