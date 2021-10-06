@@ -12,8 +12,19 @@ SetNew(&constellations, sizeof(pointT), DistanceCompare);
 * client elements.
 */
 static const int kInitialCapacity = 4;
-void SetNew(sortedset *set, int elemSize, int (*cmpfn)(const void *, const void *))
+void SetNew(sortedset *set, int elemSize, int (*cmpfn)(const void *, const void *), void (*freefn)(const void *))
 {
+    assert(elemSize > 0);
+    assert(cmpfn != NULL);
+    set->elemSize = elemSize;
+    set->cmpfn = cmpfn;
+    set->freefn = freefn;
+    set->allocLen = kInitialCapacity;
+    set->logLen = 0;
+    set->nodeSize = set->elemSize + 2 * sizeof(int);
+
+    set->base = malloc(sizeof(int) + set->allocLen * set->nodeSize);
+    *(set->base) = -1;
 }
 
 /*
@@ -29,6 +40,17 @@ printf("musta been fired");
 */
 void *SetSearch(sortedset *set, const void *elemPtr)
 {
+    int *indexPtr = FindNode(set, elemPtr);
+
+    int index = *indexPtr;
+
+    if (index == -1)
+        return NULL;
+
+    int offset = sizeof(int) + set->nodeSize * index;
+    void *elem = (char *)(set->base) + offset;
+
+    return elem;
 }
 /*
 * Function: SetAdd
@@ -41,6 +63,29 @@ void *SetSearch(sortedset *set, const void *elemPtr)
 */
 bool SetAdd(sortedset *set, const void *elemPtr)
 {
+    int *indexPtr = FindNode(set, elemPtr);
+
+    int index = *indexPtr;
+
+    if (index != -1)
+        return false;
+
+    if (set->allocLen == set->logLen)
+    {
+        set->allocLen *= 2;
+        set->base = realloc(set->base, sizeof(int) + set->allocLen * set->nodeSize);
+    }
+
+    void *dest = (char *)(set->base) + sizeof(int) + set->logLen * set->nodeSize;
+    memcpy(dest, elemPtr, set->elemSize);
+    int *arr = (int *)((char *)dest + set->elemSize);
+    arr[0] = -1; // *arr = -1;
+    arr[1] = -1; // *((char *)arr + sizeof(int)) = -1; // *(arr + 1) = 0;
+
+    *indexPtr = set->logLen;
+    set->logLen++;
+
+    return true;
 }
 
 /**
@@ -59,4 +104,43 @@ if (*ip == -1) printf("ip points where this element belongs!");
 */
 static int *FindNode(sortedset *set, const void *elem)
 {
+    int *indexPtr = set->base;
+    while (*indexPtr != -1)
+    {
+        int index = *indexPtr;
+        int offset = sizeof(int) + set->nodeSize * index;
+        void *current = (char *)(set->base) + offset;
+
+        int result = set->cmpfn(current, elem);
+
+        if (result == 0)
+            break;
+
+        if (result < 0)
+        {
+            // Right
+            indexPtr = (int *)((char *)current + set->elemSize + sizeof(int));
+        }
+        else
+        {
+            // Left
+            indexPtr = (int *)((char *)current + set->elemSize);
+        }
+    }
+
+    return indexPtr;
+}
+
+void destruct(sortedset *set)
+{
+    if (set->freefn != NULL)
+    {
+        void *current = set->base + 1;
+        for (int i = 0; i < set->logLen; i++)
+        {
+            void *elem = (char *)(set->base) + sizeof(int) + set->nodeSize * i;
+            set->freefn(elem);
+        }
+    }
+    free(set->base);
 }
