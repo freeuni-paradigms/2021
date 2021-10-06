@@ -1,6 +1,5 @@
 #include "sparsestringarray.h"
 
-static void StringFree(void *elem) { free(*(char **) elem); }
 /**
 * Function: SSANew
 * ----------------
