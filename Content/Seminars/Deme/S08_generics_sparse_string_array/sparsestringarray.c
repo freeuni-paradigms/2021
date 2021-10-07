@@ -1,5 +1,8 @@
 #include "sparsestringarray.h"
 
+static void StringFree(void *ptr) {
+	free(*(char **)ptr);
+}
 /**
 * Function: SSANew
 * ----------------
@@ -10,7 +13,16 @@
 * can also assume that groupSize divides evenly into arrayLength.
 */
 void SSANew(sparsestringarray *ssa, int arrayLength, int groupSize) {
+	ssa->arrayLength = arrayLength;
+	ssa->groupSize = groupSize;
+	ssa->numGroups = (arrayLength - 1) / groupSize + 1;
+	ssa->groups = malloc(sizeof(group) * ssa->numGroups);
 
+	for (int i = 0; i < ssa->numGroups; i++) {
+		ssa->groups[i].bitmap = malloc(groupSize * sizeof(bool));
+		bzero(ssa->groups[i].bitmap, groupSize * sizeof(bool));
+		VectorNew(&ssa->groups[i].strings, sizeof(char *), StringFree, 1);
+	}
 }
 
 /**
@@ -22,7 +34,27 @@ void SSANew(sparsestringarray *ssa, int arrayLength, int groupSize) {
 * SSAInsert makes a deep copy of the string address by str.
 */
 bool SSAInsert(sparsestringarray *ssa, int index, const char *str) {
-	return false;
+	int groupIndex = index / ssa->groupSize;
+	group *group = &ssa->groups[groupIndex];
+
+	int indexInBitMap = index % ssa->groupSize;
+	int indexInVector = 0;
+	for (int i = 0; i < indexInBitMap; i++) {
+		if (group->bitmap[i]) {
+			indexInVector++;
+		}
+	}
+
+	const char * copiedStr = strdup(str);
+	bool alreadyInserted = group->bitmap[indexInBitMap];
+	if (alreadyInserted) {
+		VectorReplace(&group->strings, &copiedStr, indexInVector);
+	} else {
+		VectorInsert(&group->strings, &copiedStr, indexInVector);
+	}
+	group->bitmap[indexInBitMap] = true;
+
+	return !alreadyInserted;
 }
 
 /**
@@ -33,7 +65,24 @@ bool SSAInsert(sparsestringarray *ssa, int index, const char *str) {
 * is called on behalf of all strings, both empty and nonempty.
 */
 void SSAMap(sparsestringarray *ssa, SSAMapFunction mapfn, void *auxData) {
+	int index = 0;
 
+	for (int i = 0; i < ssa->numGroups; i++) {
+		group *group = &ssa->groups[i];
+		int groupSize = ssa->groupSize;
+
+		int indexInVector = 0;
+		for (int j = 0; j < groupSize; j++) {
+			if (index == ssa->arrayLength) return;
+			const char * str = "";
+			if (group->bitmap[j]) {
+				str = *(char **)VectorNth(&group->strings, indexInVector);
+				indexInVector++;
+			}
+			mapfn(index, str, auxData);
+			index++;
+		}
+	}
 }
 
 /**
@@ -44,5 +93,9 @@ void SSAMap(sparsestringarray *ssa, SSAMapFunction mapfn, void *auxData) {
 * lifetime.
 */
 void SSADispose(sparsestringarray *ssa) {
-
+	for (int i = 0; i < ssa->numGroups; i++) {
+		free(ssa->groups[i].bitmap);
+		VectorDispose(&ssa->groups[i].strings);
+	}
+	free(ssa->groups);
 }
