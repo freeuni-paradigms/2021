@@ -1,6 +1,7 @@
 pass
 *.o
 !vector.o
+!hashset.o
 *.out
 *.gch
 
