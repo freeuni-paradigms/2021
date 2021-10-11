@@ -17,7 +17,7 @@ void StackInit(Stack* s, int elem_size,
 void StackDestroy(Stack* s) {
   if (s->free_fn != NULL) {
     for (int i = 0; i < s->log_len; i++) {
-      s->free_fn((char*)s->base + s->log_len * s->elem_size);
+      s->free_fn((char*)s->base + i * s->elem_size);
     }
   }
   free(s->base);
