@@ -8,8 +8,7 @@ int * serializeListSolution(const void *list) {
 
   while (curr != NULL) {
     const char *str = (const char *)(curr + 1);
-    serialization = realloc(serialization,
-    serializationLength + strlen(str) + 1);
+    serialization = realloc(serialization, serializationLength + strlen(str) + 1);
     strcpy((char *) serialization + serializationLength, str);
     serializationLength += strlen(str) + 1;
     curr = (const void **) *curr;
