@@ -9,6 +9,8 @@ grand_parent: სემინარები
 
 ## [პირობა](./problem.pdf)
 
+## [ამოხსნა](./sparsestringarray.c)
+
 ```
 make
 ./tests.out
