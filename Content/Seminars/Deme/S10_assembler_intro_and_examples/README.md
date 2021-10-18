@@ -7,8 +7,8 @@ grand_parent: სემინარები
 
 # შესავალი
 
-## [ჰენდაუთი](./2021/handouts/12-Computer-Architecture.pdf)
+## [ჰენდაუთი](https://github.com/freeuni-paradigms/2021/handouts/12-Computer-Architecture.pdf)
 
 # მაგალითები
 
-## [ჰენდაუთი](./handouts/13-Simple-Code-Generation.pdf)
+## [ჰენდაუთი](https://github.com/freeuni-paradigms/2021/handouts/13-Simple-Code-Generation.pdf)
