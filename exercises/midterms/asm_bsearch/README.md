@@ -1,5 +1,8 @@
 ---
+nav_order: 1
+title: Assembly - bsearch
 parent: გამოცდის საკითხების მაგალითები
+grand_parent: სავარჯიშოები
 ---
 
 # Assembly - bsearch
