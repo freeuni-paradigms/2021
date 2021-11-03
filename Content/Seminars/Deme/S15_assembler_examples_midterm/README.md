@@ -11,3 +11,6 @@ grand_parent: სემინარები
 ## [ამოხსნები](https://github.com/freeuni-paradigms/2021/blob/master/handouts/20S-Section-Solution.pdf)
 
 
+# შუალედურის მაგალითი
+
+## [ამოცანა](https://github.com/freeuni-paradigms/2021/tree/master/exercises/midterms/asm_bsearch)
