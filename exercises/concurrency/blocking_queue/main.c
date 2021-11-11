@@ -19,6 +19,10 @@ void enqueue(Queue *q, void *elem)
 {
 }
 
-void dequeue(Queue *q, void *ptr)
+void dequeue(Queue *q, void **ptr)
+{
+}
+
+void destroy_queue(Queue *q)
 {
 }
