@@ -33,7 +33,7 @@ void * OddPrinter(void * data) {
     dataT* dataT = data;
     for (int i = 1; i <= MAX_NUM; i += 2) {
         semWait(dataT->oddLock);
-        printf("Even printer: %d\n", i);
+        printf("Odd printer: %d\n", i);
         semPost(dataT->evenLock);
     }
 }
