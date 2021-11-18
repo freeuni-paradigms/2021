@@ -8,10 +8,10 @@ typedef struct
     // საჭირო ველები დაამატეთ აქ
 } Account;
 
-void AmountIn(Account *fromAccount, Account *myAccount, int amount)
+void tryTransfer(Account *fromAccount, Account *toAccount, int amount)
 {
 }
 
-void AmountOut(Account *myAccount, Account *toAccount, int amount)
+void transfer(Account *fromAccount, Account *toAccount, int amount)
 {
 }
