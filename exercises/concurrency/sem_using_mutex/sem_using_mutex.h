@@ -6,8 +6,8 @@
 
 typedef struct
 {
-    int value;
-    pthread_mutex_t *lock;
+    int counter;
+    pthread_mutex_t *mutex;
     pthread_cond_t *cond;
 } semT;
 

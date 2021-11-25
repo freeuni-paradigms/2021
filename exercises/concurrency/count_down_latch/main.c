@@ -34,10 +34,11 @@ void * calculateSum(void* datat){
         *data->sum += data->arr[numSlice * data->threadInd + i];
         pthread_mutex_unlock(data->lock);
     }
-    printf("Thread with Id: %d finished it's work\n", data->threadInd);
+    printf("Thread with Id: %d finished work\n", data->threadInd);
     countdown(data->latch);
 }
 
+// gcc main.c latch.c -lpthread
 int main(){
     srand(time(NULL));
 
