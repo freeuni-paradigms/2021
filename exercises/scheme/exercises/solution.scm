@@ -6,3 +6,10 @@
     '()
 )
 
+(define (prime? n)
+    #f
+)
+
+(define (primes? n)
+    '()
+)
