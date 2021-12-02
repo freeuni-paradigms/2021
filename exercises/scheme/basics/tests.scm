@@ -20,3 +20,22 @@
 
 (display (if (equal? (length_ '()) 0) "11 SUCCESS" "11 FAILURE"))(newline)
 (display (if (equal? (length_ '(1 2 3 4 5)) 5) "12 SUCCESS" "12 FAILURE"))(newline)
+
+
+(display (if (equal? (k-th-element '(1 2 3) 2) 3) "13 SUCCESS" "13 FAILURE"))(newline)
+(display (if (equal? (k-th-element '() 0) "None") "14 SUCCESS" "14 FAILURE"))(newline)
+
+
+(display (if (equal? (filter-range '(1 2 3 4) 2 4) '(2 3 4)) "15 SUCCESS" "15 FAILURE"))(newline)
+(display (if (equal? (filter-range '(1 2 3 4) 9 14) '()) "16 SUCCESS" "16 FAILURE"))(newline)
+(display (if (equal? (filter-range '(1 2 3 4) 4 1) '(1 2 3 4)) "17 SUCCESS" "17 FAILURE"))(newline)
+
+
+(display (if (equal? (prime? 2) #t) "18 SUCCESS" "18 FAILURE"))(newline)
+(display (if (equal? (prime? 12) #f) "19 SUCCESS" "19 FAILURE"))(newline)
+(display (if (equal? (prime? 1) #f) "20 SUCCESS" "20 FAILURE"))(newline)
+
+
+(display (if (equal? (primes? '(1 2 3 4)) '(#f #t #t #f)) "21 SUCCESS" "21 FAILURE"))(newline)
+(display (if (equal? (primes? '()) '()) "22 SUCCESS" "22 FAILURE"))(newline)
+(display (if (equal? (primes? '(10 12 23 33)) '(#f #f #t #f)) "23 SUCCESS" "23 FAILURE"))(newline)
