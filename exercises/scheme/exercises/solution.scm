@@ -2,6 +2,10 @@
     '()
 )
 
+(define (sorted? lst)
+    #t
+)
+
 (define (max_ lst)
     0
 )
