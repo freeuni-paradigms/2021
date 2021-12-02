@@ -22,7 +22,7 @@
     '()
 )
 
-(define (pow n)
+(define (pow a n)
     0
 )
 

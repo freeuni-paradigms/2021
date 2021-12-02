@@ -20,8 +20,8 @@
 
 (display (if (equal? (range 5) '(1 2 3 4 5)) "12 SUCCESS" "12 FAILURE"))(newline)
 
-(display (if (equal? (pow 5) 32) "13 SUCCESS" "13 FAILURE"))(newline)
-(display (if (equal? (pow 1) 2) "14 SUCCESS" "14 FAILURE"))(newline)
+(display (if (equal? (pow 2 5) 32) "13 SUCCESS" "13 FAILURE"))(newline)
+(display (if (equal? (pow 7 1) 7) "14 SUCCESS" "14 FAILURE"))(newline)
 
 (display (if (equal? (generate_powers 4) '(2 4 8 16)) "15 SUCCESS" "15 FAILURE"))(newline)
 
