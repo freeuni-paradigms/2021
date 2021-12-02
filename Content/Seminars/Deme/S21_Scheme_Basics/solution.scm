@@ -70,3 +70,25 @@
         (else (filter-range (cdr lst) a b))
     )
 )
+
+; 8
+(define (prime-helper n k)
+    (cond 
+        ((> k (sqrt n)) #t)
+        ((zero? (remainder n k)) #f)
+        (else (prime-helper n (+ k 1)))
+    )
+)
+
+(define (prime? n)
+    (if (= n 1) #f
+        (prime-helper n 2)
+    )
+)
+
+; 9
+(define (primes? lst)
+    (if (null? lst) '()
+        (cons (prime? (car lst)) (primes? (cdr lst))) 
+    )
+)
