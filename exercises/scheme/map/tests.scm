@@ -23,3 +23,7 @@
 
 (display (if (equal? (frequency '(1 1 2 2 3 3 4)) '((1 2) (2 2) (3 2) (4 1))) "frequency 1 SUCCESS" "frequency 1 FAILURE"))(newline)
 (display (if (equal? (frequency '(5 1 5 1 5)) '((1 2) (5 3))) "frequency 2 SUCCESS" "frequency 2 FAILURE"))(newline)
+
+
+(display (if (equal? (multiply 2 '(1 1 2 2 3)) '(1 1 1 1 2 2 2 2 3 3)) "multiply 1 SUCCESS" "multiply 1 FAILURE"))(newline)
+(display (if (equal? (multiply 4 '(5 1)) '(5 5 5 5 1 1 1 1)) "multiply 2 SUCCESS" "multiply 2 FAILURE"))(newline)

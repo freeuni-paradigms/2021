@@ -25,3 +25,11 @@
 (define (frequency lst)
     '()
 )
+
+(define (multiply n lst)
+    '()
+)
+
+(define (k-subset lst k)
+    '()
+)
