@@ -1,18 +1,16 @@
-<!-- ---
+---
 nav_order: 22
-title: 22. სქემა - საწყისები
+title: 22. სქემა - მაგალითები
 parent: გვანცა
 grand_parent: სემინარები
 ---
 
 # გარჩეული ამოცანები
 
-## [ჰენდაუთი](../../../../handouts/29-Introduction-To-Scheme.pdf)
+## [პირობა](../../../../exercises/scheme/exercises/README.md)
 
-## [პირობა](../../../../exercises/scheme/basics/README.md)
-
-## [ტესტები](../../../../exercises/scheme/basics/tests.scm)
+## [ტესტები](../../../../exercises/scheme/exercises/tests.scm)
 
 # ტესტებზე გაშვების ინსტრუქცია
 
-- `tests.scm`ში `load`ში `PATH` შეცვალეთ სრული მისამართით და გაუშვით `kawa PATH/tests.scm` -->
+- შედით `exercises` დირექტორიაში და გაუშვით `kawa tests.scm`
