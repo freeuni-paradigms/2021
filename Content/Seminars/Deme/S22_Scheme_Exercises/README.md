@@ -9,6 +9,8 @@ grand_parent: სემინარები
 
 ## [პირობა](../../../../exercises/scheme/exercises/README.md)
 
+## [ამოხსნები](./solution.scm)
+
 ## [ტესტები](../../../../exercises/scheme/exercises/tests.scm)
 
 # ტესტებზე გაშვების ინსტრუქცია
