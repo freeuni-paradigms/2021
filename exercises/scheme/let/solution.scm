@@ -88,5 +88,43 @@
 )
 ;6 isWay?
 (define (isWay? graph start finish)
-    #t
+    (bfs graph (list start) finish (list start))
+)
+
+(define (bfs edges queue finish visited)
+    (cond 
+        ((null? queue) #f)
+        ((equal? finish (car queue)) #t)
+        (else
+            (let
+                ((neighbours (getNeighbours edges (car queue) visited)))
+                (bfs edges (append neighbours (cdr queue)) finish (append neighbours visited))
+            )
+        )
+    )
+)
+
+(define (containsElem? elem lst)
+    (> (apply + (map (lambda (x) (if (equal? elem x) 1 0)) lst)) 0)
+)
+
+(define (getNeighbours edges vertex visited)
+    (apply append 
+        (map 
+            (lambda (x)
+                (cond
+                    (
+                        (and (equal? (car x) vertex) (not (containsElem? (cadr x) visited)))
+                        (list (cadr x))
+                    )
+                    (
+                        (and (equal? (cadr x) vertex) (not (containsElem? (car x) visited)))
+                        (list (car x))
+                    )
+                    (else '())
+                )
+            )
+            edges
+        )
+    )
 )
