@@ -98,7 +98,7 @@
         (else
             (let
                 ((neighbours (getNeighbours edges (car queue) visited)))
-                (bfs edges (append neighbours (cdr queue)) finish (append neighbours visited))
+                (bfs edges (append (cdr queue) neighbours) finish (append neighbours visited))
             )
         )
     )
