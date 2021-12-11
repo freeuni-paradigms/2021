@@ -1,6 +1,6 @@
 ---
-title: სქემა
-nav_order: 4
+title: სრედები
+nav_order: 3
 parent: სავარჯიშოები
 has_children: true
 ---

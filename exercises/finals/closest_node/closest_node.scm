@@ -1,0 +1,1 @@
+(define (closest-node node))
