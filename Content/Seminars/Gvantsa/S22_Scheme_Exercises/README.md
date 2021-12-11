@@ -11,6 +11,6 @@ grand_parent: სემინარები
 
 ## [ტესტები](../../../../exercises/scheme/exercises/tests.scm)
 
-# ტესტებზე გაშვების ინსტრუქცია
+## ტესტებზე გაშვების ინსტრუქცია
 
-- შედით `exercises` დირექტორიაში და გაუშვით `kawa tests.scm`
+- შედით `exercises/scheme/exercises` დირექტორიაში და გაუშვით `kawa tests.scm`
