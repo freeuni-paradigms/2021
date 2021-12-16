@@ -1,8 +1,8 @@
 ---
-title: ფინალური გამოცდის საკითხების მაგალითები
 nav_order: 3
-parent: სავარჯიშოები
-has_children: true
+title: Scheme - max-decreasing-subsegment
+parent: ფინალური გამოცდის საკითხების მაგალითები
+grand_parent: სავარჯიშოები
 ---
 
 # მაქსიმალური სიგრძის კლებადი ქვესეგმენტი
