@@ -1,1 +1,6 @@
-(define (closest-node node))
+(define (closest-node node)
+    (if (null? (cadr node))
+        (car node)
+        (+ (car node) (apply min (map closest-node (cadr node))))
+    )
+)
