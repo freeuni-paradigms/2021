@@ -8,6 +8,12 @@ typedef void(*IterFn)(void* aux, const void* elem, int i, int j);
 
 typedef struct {
   // აქ დაამატეთ საჭირო ცვლადები
+  void* base;
+  bool* is_set;
+  int n;
+  int m;
+  int elem_size;
+  FreeFn free_fn;
 } Array2D;
 
 // უკეთებს ინიციალიზაციას მასივს.
