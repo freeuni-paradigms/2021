@@ -1,0 +1,17 @@
+<FindStudent>:
+// int i = 0;
+
+
+// while (i < n) {
+
+
+// if (match_fn(&students[i]) == 0) {
+
+
+// break
+
+
+// i++
+
+
+// return (Student*)&students[0].subjects[i].code[2] - students;
