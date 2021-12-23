@@ -1,0 +1,7 @@
+make array2d str_array2d
+make -C tests run_tests
+./run_tests
++ makefile
++ str_array2d.h
++ tests/makefile
++ tests/tests.c
