@@ -12,5 +12,5 @@ grand_parent: სემინარები
 ## [პირობა](../../../../exercises/finals/threads_robots/README.md)
 
 ## ტესტებზე გაშვების ინსტრუქცია
-ფაილების კომპილაციისთვის გაუშვით: **gcc tests.c competition.c robots.c -lpthread** 
+ფაილების კომპილაციისთვის გაუშვით: **gcc tests.c competition.c robot.c -lpthread** 
 ხოლო დაკომპილირებული ფაილის გასაშვებად: **a.exe**
