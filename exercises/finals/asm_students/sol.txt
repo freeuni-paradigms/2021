@@ -1,0 +1,56 @@
+// Subject - 16 = 8 + 8
+// code    - 0
+// credits - 8
+
+// Student  - 84 = 4 + 5 * 16
+// name     - 0
+// subjects - 4
+
+// match_fn - SP + 4
+// students - SP + 8
+// n        - SP + 12
+
+<FindStudent>:
+// int i = 0;
+SP = SP - 4;
+M[SP] = 0;
+
+// while (i < n) {
+R1 = M[SP];  // LOAD i
+R2 = M[SP + 12 + 4];  // LOAD n
+BGE R1, R2  PC + 16 * 4
+
+// if (match_fn(&students[i]) == 0) {
+R1 = M[SP + 8 + 4];  // students
+R2 = M[SP];  // i
+R3 = R2 * 84;  // [i]
+R4 = R1 + R3;  // &students[i]
+R1 = M[SP + 4 + 4];  // match_fn
+SP = SP - 4;
+M[SP] = R4;
+CALL R1;
+SP = SP + 4;
+BNE RV, 0  PC + 2 * 4
+
+// break
+JMP PC + 5 * 4;
+
+// i++
+R1 = M[SP];  // LOAD i
+R2 = R1 + 1; // inc
+M[SP] = R2;  / STORE i
+
+JMP PC - 17 * 4;
+
+// return (Student*)&students[0].subjects[i].code[2] - students;
+R1 = M[SP + 8 + 4];  // students[0]
+R2 = R1 + 4;  // .subjects
+R3 = M[SP];  // LOAD i
+R4 = 16 * R1;  // i-th offset
+R5 = R2 + R4;  // .subjects[i]
+R6 = R5 + 2;   // code[2]
+R1 = M[SP + 8 + 4];
+R2 = R6 - R1;
+RV = R2 / 84;
+SP = SP + 4
+RET;
