@@ -13,11 +13,18 @@
 
 bool FightRobots(const Robot* x, const Robot* y) {
   printf("New fight: %d %d\n", x->id, y->id);
-  sleep((x->id + y->id) / 5.0);
+  sleep((x->id + y->id) / 50.0);
+  // sleep(1.0);
   if (x->id > y->id) {
     printf("Fight %d %d: winner is %d\n", x->id, y->id, x->id);
   } else {
     printf("Fight %d %d: winner is %d\n", x->id, y->id, y->id);
+  }
+
+  if (x->id == 9) {
+    return true;
+  } else if (y->id == 9) {
+    return false;
   }
   return x->id > y->id;
 }
@@ -41,6 +48,9 @@ int main(int argc, char** argv) {
       printf("Participant %d was rejected\n", i);
     }
   }
-  ASSERT(&robots[9] == CompetitionStop(&comp));
+
+  const Robot * winner = CompetitionStop(&comp);
+  printf("winner: %d \n", winner->id);
+  ASSERT(&robots[9] == winner);
   return 0;
 }
