@@ -128,6 +128,7 @@ bool CompetitionAddParticipant(Competition* comp, const Robot* robot) {
 
   comp->robots[comp->robots_in_queue] = robot;
   comp->robots_in_queue++;
+  pthread_cond_signal(&comp->cond);
   pthread_mutex_unlock(&comp->lock);
   
   return true;
